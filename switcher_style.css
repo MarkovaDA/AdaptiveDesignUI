@@ -1,0 +1,44 @@
+.switcher-input {
+  display: none;
+}
+.switcher-input:checked + .switcher-label:before {
+  background-color: #303030;
+}
+.switcher-input:checked + .switcher-label:after {
+  transform: translateX(18px);
+}
+.switcher-label {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  position: relative;
+  margin-left: 16px;
+}
+.switcher-label:before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.switcher-label:after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  top: -2px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s linear;
+}
+.switcher-label:active:after {
+  box-shadow: 0 0 0 4px rgba(255, 216, 64, 0.6);
+}
