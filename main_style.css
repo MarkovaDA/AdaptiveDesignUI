@@ -411,10 +411,10 @@ body {
 @media screen and (max-width: 750px) and (min-width: 600px) {
 
 	.preview-grid .right-grid-column {
-		justify-content: center;
+		justify-content: space-between;
 	}
 	.right-grid-column .person-card {
-		width: 250px;
-		min-height: 288px;
+		width: 164px;
+		min-height: 192px;
 	}
 }
