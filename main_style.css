@@ -168,7 +168,6 @@ body {
 	width: 200px;
 	margin-left: 16px;
 	height: auto;
-	background: pink;
 }
 .preview-grid .right-grid-column {
 	width: calc(100% - 232px);
@@ -212,6 +211,38 @@ body {
   margin-left: 16px;
   display: inline-block;
   cursor: pointer;
+}
+
+.icon-check {
+	background: url('assets/icons/check.svg') no-repeat center;
+	background-size: cover;
+	width: 16px;
+	height: 16px;
+	margin-left: 8px;
+	display: inline-block;
+	border: 1px solid blue;
+}
+
+.info-label {
+	display: inline-block;
+	margin-left: 32px;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+	color: #26bf8c;
+}
+.info-label:before {
+	display: inline-block;
+	content: "";
+	background-image: url('assets/icons/check.svg');
+	position:absolute;
+	left: 24px;
+	top: 2px;
+	width: 16px;
+	height: 16px;
+	background-size: cover;
 }
 
 .icon-arrow-drop-down {
@@ -364,7 +395,6 @@ body {
 		flex-direction: column;
 	}
 	.preview-grid .left-grid-column {
-		min-height: 45px;
 		width: calc(100% - 32px);
 		margin-bottom: 16px;
 	}
