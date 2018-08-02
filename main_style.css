@@ -49,6 +49,46 @@ body {
 	background-color: rgba(255, 255, 255, 0.6);
 }
 
+.menu-item.active {
+	background-color: #ffd840;
+}
+
+.menu-item.active .item-title {
+	font-weight: bold;
+	color: #303030 !important;
+}
+
+.item-avatar.imaged {
+	background: url('assets/images/soccer.jpeg') center no-repeat;
+	background-size: cover;
+}
+
+.person-avatar.imaged {
+	background: url('assets/images/face1.png') center no-repeat !important;
+	background-size: cover !important;
+}
+
+.person-card.empty .person-avatar {
+	position: relative;
+	background: rgba(0, 0, 0, 0.05) none;
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+	opacity: 0.6;
+}
+.person-card.empty .person-avatar:hover{
+	opacity: 1;
+	transition: .5s;
+}
+.person-card.empty .person-avatar:before {
+	content: '';
+	position: absolute;
+	top:calc(50% - 8px);
+	left:calc(50% - 8px);
+	width: 16px;
+	height: 16px;
+	background: url('assets/icons/plus.svg');
+	background-size: cover;
+}
+
 .menu-item .item-title {
 	width: calc(100% - 112px);
 	font-size: 14px;
@@ -179,17 +219,20 @@ body {
 .right-grid-column .person-card {
 	width: 148px;
 	min-height: 176px;
+	height: auto;
 	margin-left:16px;
 	margin-bottom: 28px;
 }
 .person-card .person-avatar {
 	width: 100%;
-	height: 84%;
-	background-color: rgba(0, 0, 0, 0.1);
+	height: 148px;
+	background: rgba(0, 0, 0, 0.1) url('assets/images/unknown_face.jpg') no-repeat center;
+	background-size:cover;
 	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
 	border-radius: 50%;
 }
 .person-card .person-title {
+	position: relative;
 	width: 100%;
 	margin-top: 4px;
 	text-align: center;
@@ -339,11 +382,14 @@ body {
 		justify-content: space-between;
 		position: relative;
 	}
-
 	.right-grid-column .person-card {
 		position: relative;
 		width: 200px;
 		min-height: 228px;
+	}
+	.person-card .person-avatar {
+		height: 200px;
+		width: 200px;
 	}
 }
 /*совместно для телефонов и планшетов*/
@@ -404,17 +450,30 @@ body {
 	}
 	.right-grid-column .person-card {
 		width: 200px;
-		height: 228px;
+		min-height: 228px;
+	}
+	.person-card .person-avatar {
+		width: 200px;
+		height: 200px;
 	}
 
 }
 @media screen and (max-width: 750px) and (min-width: 600px) {
+	.preview-grid .left-grid-column {
+		max-width: 100px;
+	}
 
 	.preview-grid .right-grid-column {
-		justify-content: space-between;
+		justify-content: space-around;
+		width: calc(100% - 132px);
 	}
+
 	.right-grid-column .person-card {
 		width: 164px;
 		min-height: 192px;
+	}
+	.person-card .person-avatar {
+		width: 164px;
+		height: 164px;
 	}
 }
