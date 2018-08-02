@@ -67,7 +67,6 @@ body {
 	background: url('assets/images/face1.png') center no-repeat !important;
 	background-size: cover !important;
 }
-
 .person-card.empty .person-avatar {
 	position: relative;
 	background: rgba(0, 0, 0, 0.05) none;
@@ -470,6 +469,20 @@ body {
 
 	.right-grid-column .person-card {
 		width: 164px;
+		min-height: 192px;
+	}
+	.person-card .person-avatar {
+		width: 164px;
+		height: 164px;
+	}
+}
+
+@media screen and (max-width: 1156px) and (min-width: 800px) {
+	.main-wrapper .left-column {
+		max-width: 320px;
+	}
+	.person-card {
+		width: 164px !important;
 		min-height: 192px;
 	}
 	.person-card .person-avatar {
